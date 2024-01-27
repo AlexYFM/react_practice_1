@@ -36,7 +36,7 @@ function App() {
   }, [])
 
   useEffect(() => {
-    localStorage.setItem("todos", JSON.stringify(todos))
+    localStorage.setItem("todos", JSON.stringify(todos)) // I think I had an issue with this that I didn't check before just copying directly from git
   }, [todos])
 
   return (
