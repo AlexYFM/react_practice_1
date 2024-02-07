@@ -4,16 +4,17 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Todos from './components/Todos'
 import AddTodo from './components/AddTodo'
+import { useSelector } from 'react-redux'
 
 function App() {
-  const [count, setCount] = useState(0)
-
-  return (
-    <>
-      <AddTodo/>
-      <Todos/>
-    </>
-  )
+	const what = useSelector((state) => state.todos)
+	console.log(what)
+	return (
+		<>
+		<AddTodo/>
+		<Todos/>
+		</>
+	)
 }
 
 export default App
